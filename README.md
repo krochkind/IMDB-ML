@@ -17,10 +17,13 @@ I used a dataset from the Internet Movie Database of 86,000 movies across multip
 9. Drop variables subject to hindsight bias<br />ex. worlwide_gross_income [sic], votes, reviews, etc.
 10. Convert month into 12 dummy variables
 11. Convert genre (comma-separated strings) into dummy variables
-12. Chunk Actor/Writer/Director into Low/Medium/High Success<br />This was because there are 64,000 actors, so creating separate dummy variables for each was impractical
+12. Chunk Actor/Writer/Director into Low/Medium/High Success based on how many successful movies they had been in<br />This was because there are 64,000 actors, so creating separate dummy variables for each was impractical<br /><br />
 
 ## Algorithms
 I compared 15 transformation algorithms and 40 classification algorithms, based on 5-Fold Cross Validation testing accuracy.  The best results were found with **QuantileTransformer** and **BaggingClassifier-SVC**.  I then used GridSearchCV to tune the hyperparameters.
+
+## Limitations to the model
+Unfortunately, the data I used was subject to "hindsight bias" because the model was trained using the current measure of success.  For example, I classified Harrison Ford as a "High Success" actor, so according to the data, *"High Success" actor Harrison Ford was in the successful movie Star Wars*.  But in 1977, Harrison Ford was not highly successful yet.  The model needs to be retrained using more timely metrics of success.
 
 ## Files
 [IMDB_movies.zip](https://github.com/krochkind/IMDB/blob/main/IMDB_movies.zip) - Original Data Set (20 mb zipped, 47 mb unzipped)<br />
