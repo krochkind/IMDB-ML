@@ -17,7 +17,7 @@ I used a dataset from the Internet Movie Database of 86,000 movies across multip
 9. Drop variables subject to hindsight bias<br />ex. worlwide_gross_income [sic], votes, reviews, etc.
 10. Convert month into 12 dummy variables
 11. Convert genre (comma-separated strings) into dummy variables
-12. Chunk Actor/Writer/Director into Low/Medium/High Success<br />This was because there are 64,000 actors, so creating separate dummy variables for each was impractical<br />*Note: This step should be revisted, since I based a "highly successful actor" as any actor who was in 10 successful movies.  So, for example, Harrison Ford is a "Highly Successful Actor".  But at the time of Star Wars, Harrison Ford had not been in 10 succesful movies yet, so he was not "highly succesful" yet.  I will need to retain the data using the success of the actor/actress at the time of the movie, and not subject to Hindsight Bias.*
+12. Chunk Actor/Writer/Director into Low/Medium/High Success<br />This was because there are 64,000 actors, so creating separate dummy variables for each was impractical
 
 ## Algorithms
 I compared 15 transformation algorithms and 40 classification algorithms, based on 5-Fold Cross Validation testing accuracy.  The best results were found with **QuantileTransformer** and **BaggingClassifier-SVC**.  I then used GridSearchCV to tune the hyperparameters.
