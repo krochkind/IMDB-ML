@@ -1,7 +1,7 @@
 # Using Machine Learning in Python to predict if a movie will be a success
 A movie is defined as "successful" if its revenue > 2.5 times its budget.  This code attempts to determine if Machine Learning can be used to predict if a movie will be successful based on several input parameters (Ex. the genre, what month it was released, its budget, its duration, actors/directors/writers, etc.)
 
-I used a dataset from the Internet Movie Database of 86,000 movies across multiple countries, from 1894 - 2019.  The final model predicts with 81% accuracy whether or not a movie will be a success.
+I used a dataset from the Internet Movie Database of 86,000 movies across multiple countries, from 1894 - 2019.  The final model predicts with **81% accuracy** whether or not a movie will be a success.
 
 ![Confusion Matrix](https://user-images.githubusercontent.com/64739529/120267879-af11f680-c259-11eb-96f4-53a9ab09ed0e.png)
 
