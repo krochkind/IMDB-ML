@@ -5,6 +5,8 @@ I used a dataset from the Internet Movie Database of 86,000 movies across multip
 
 ![Confusion Matrix](https://user-images.githubusercontent.com/64739529/120267879-af11f680-c259-11eb-96f4-53a9ab09ed0e.png)
 
+All code and the step-by-step processes (with graphs) can be found in my [Jupyter Notebook](https://github.com/krochkind/IMDB-ML/blob/main/IMDB.ipynb)
+
 ## Munging the Data Set
 1. Remove all rows without budget and worlwide_gross_income [sic]
 2. Remove all rows where the budget isn't in $ (USD)
